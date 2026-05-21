@@ -21,7 +21,7 @@ export const profile = {
   location: "Surabaya, Indonesia",
   description:
     "Siswa RPL yang membangun aplikasi web dari sisi antarmuka sampai logika backend. Fokus Bima adalah membuat produk yang cepat, rapi, dan mudah dipakai, sambil terus memperluas stack melalui proyek nyata.",
-  githubUrl: "https://github.com/",
+  githubUrl: "https://github.com/bimaak15",
 };
 
 export const stats = [
@@ -93,25 +93,25 @@ export const skillGroups = [
 
 export const projects = [
   {
-    title: "Portfolio API-ready",
+    title: "JavaScript DOM Learning",
     description:
-      "Website profil pribadi yang disiapkan untuk mengambil data profil, skill, proyek, dan prestasi dari Laravel REST API.",
-    stack: ["Next.js", "Tailwind CSS", "Laravel API"],
-    githubUrl: "https://github.com/",
+      "Tutorial interaktif untuk memahami cara JavaScript berinteraksi dengan halaman web. Cocok untuk pemula yang ingin belajar DOM dari nol.",
+    stack: ["HTML", "CSS", "JavaScript"],
+    githubUrl: "https://github.com/bimaak15/javascript-dom-learning",
   },
   {
-    title: "Sistem CRUD RPL",
+    title: "krisnaprinting",
     description:
-      "Aplikasi latihan manajemen data dengan alur tambah, baca, ubah, hapus, validasi form, dan tampilan tabel responsif.",
+      "Website ini dirancang khusus untuk mengelola invoice dan transaksi harian bagi bisnis packaging (dus kemasan, spundbond, dll). Proyek ini mengubah sistem konvensional menjadi digital, memberikan kemudahan dalam pembuatan tagihan, pemantauan uang masuk, dan manajemen riwayat pesanan dengan antarmuka yang sangat intuitif.",
     stack: ["Laravel", "MySQL", "Bootstrap"],
-    githubUrl: "https://github.com/",
+    githubUrl: "https://github.com/bimaak15/krisnaprinting",
   },
   {
-    title: "Dashboard Belajar",
+    title: "Web CRM Travel",
     description:
-      "Eksperimen dashboard untuk melacak materi, target mingguan, dan progres skill agar pembelajaran lebih terukur.",
-    stack: ["React", "Node.js", "Chart UI"],
-    githubUrl: "https://github.com/",
+      "CRM dan Sistem Manajemen Konten (CMS) untuk Agen Perjalanan, dibangun dengan PHP native dan MySQL. Menyediakan situs utama publik bagi pelanggan untuk menelusuri paket wisata, melihat galeri, dan mengakses informasi perusahaan/kontak, beserta dasbor administratif untuk mengelola konten, pemesanan, pelanggan, dan pembayaran.",
+    stack: ["PHP", "MySQL", "Bootstrap"],
+    githubUrl: "https://github.com/FAYnim/Web-CRM-Travel",
   },
 ];
 
