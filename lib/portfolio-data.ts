@@ -14,6 +14,7 @@ import {
 export const profile = {
   name: "Bima Satria Putra",
   role: "Junior Software Engineer",
+  roles: ["Junior Software Engineer", "Frontend Developer", "UI Enthusiast"],
   age: "16 tahun",
   birthDate: "Tanggal lahir siap dihubungkan ke API",
   school: "SMK Negeri 1 Surabaya",
