@@ -137,11 +137,11 @@ export default function Home() {
         className="fixed top-0 left-0 right-0 h-1 bg-primary z-[60] origin-left"
         style={{ scaleX }}
       />
-      
+
       <header className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur-xl">
         <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-          <motion.a 
-            href="#" 
+          <motion.a
+            href="#"
             className="flex items-center gap-2 font-semibold"
             whileHover={{ scale: 1.05 }}
           >
@@ -167,13 +167,13 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section 
+      <section
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
         className="relative overflow-hidden border-b bg-[radial-gradient(circle_at_50%_50%,hsl(var(--muted)/0.5)_0%,hsl(var(--background))_100%)]"
       >
         <div className="mx-auto grid min-h-[calc(100vh-4rem)] max-w-7xl items-center gap-12 px-4 py-12 sm:px-6 lg:grid-cols-2 lg:px-8 lg:py-20">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -207,8 +207,8 @@ export default function Home() {
                 </a>
               </Button>
             </div>
-            
-            <motion.dl 
+
+            <motion.dl
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1 }}
@@ -237,13 +237,13 @@ export default function Home() {
               {floatingIcons.map(({ Icon, color, delay }, i) => (
                 <motion.div
                   key={i}
-                  animate={{ 
+                  animate={{
                     y: [0, -20, 0],
                     rotate: [0, 10, -10, 0]
                   }}
-                  transition={{ 
-                    duration: 4, 
-                    repeat: Infinity, 
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
                     delay,
                     ease: "easeInOut"
                   }}
@@ -260,20 +260,20 @@ export default function Home() {
 
               {/* Profile Image with effects */}
               <div className="relative z-10 size-72 sm:size-96 overflow-hidden rounded-[2.5rem] border-4 border-background shadow-2xl transition-all duration-500 group-hover:scale-[1.02] group-hover:-translate-y-2">
-                <img 
-                  src="/profile.jpg" 
-                  alt={profile.name} 
+                <img
+                  src="/profile.jpg"
+                  alt={profile.name}
                   className="size-full object-cover grayscale-[0.2] transition-all duration-700 group-hover:grayscale-0"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
               </div>
-              
+
               {/* Background Glows */}
               <div className="absolute -inset-4 -z-10 rounded-full bg-primary/20 blur-[60px] animate-pulse" />
               <div className="absolute top-1/2 left-1/2 -z-20 size-[120%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-secondary/10 blur-[100px]" />
 
               {/* Code Card Overlap */}
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
@@ -292,7 +292,7 @@ export default function Home() {
                     {apiEndpoints.slice(0, 3).map((endpoint, i) => {
                       const Icon = endpoint.icon;
                       return (
-                        <motion.div 
+                        <motion.div
                           key={i}
                           animate={{ opacity: [0.7, 1, 0.7] }}
                           transition={{ duration: 2, repeat: Infinity, delay: i * 0.5 }}
@@ -317,7 +317,7 @@ export default function Home() {
       {/* Profil Section */}
       <Section id="profil" className="relative overflow-hidden border-b py-20 sm:py-28">
         <div className="absolute -left-20 top-1/4 -z-10 size-96 rounded-full bg-primary/5 blur-[120px]" />
-        
+
         <div className="mx-auto grid max-w-7xl gap-16 px-4 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:px-8">
           <div>
             <Badge variant="outline" className="gap-2 px-3 py-1">
@@ -387,8 +387,13 @@ export default function Home() {
               Etalase Keahlian
             </Badge>
             <h2 className="mt-6 text-4xl font-bold tracking-tight sm:text-5xl">
-              Stack mumpuni yang dikuasai.
+              Tech Stack mumpuni yang dikuasai.
             </h2>
+            <p className="mt-4 text-muted-foreground/80 italic text-sm sm:text-base leading-relaxed">
+              *Note: Tidak semua bahasa pemrograman dibawah 100% saya kuasai.
+              Mengingat saya baru belajar sekitar dua tahun, jadi value saya belum sepenuhnya memumpuni. Mungkin
+              hanya beberapa saja yang bisa saya kuasai, karena saya manusia biasa bukan nabi boy. 😂
+            </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {skillGroups.map((group, i) => (
@@ -457,8 +462,8 @@ export default function Home() {
               >
                 <Card className="group flex h-full flex-col overflow-hidden border-none bg-muted/20 hover:bg-muted/40 transition-all shadow-sm hover:shadow-2xl">
                   <div className="aspect-video relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
-                    <img 
-                      src={(project as any).image} 
+                    <img
+                      src={(project as any).image}
                       alt={project.title}
                       className="size-full object-cover"
                     />

@@ -20,10 +20,8 @@ export const profile = {
   school: "SMK Negeri 1 Surabaya",
   major: "Rekayasa Perangkat Lunak",
   location: "Surabaya, Indonesia",
-  description:
-    "Siswa SMK Negeri 1 Surabaya jurusan Rekayasa Perangkat Lunak yang tertarik dengan dunia web development, terutama dalam membuat tampilan website yang sederhana, nyaman dilihat, dan mudah digunakan.",
-  aboutDetail:
-    "Saya mulai memasuki dunia IT dari kecil, berawal dari rasa penasaran, lalu perlahan berkembang menjadi sesuatu yang benar-benar saya tekuni sampai sekarang.\n\nSaat ini saya lebih sering menggunakan JavaScript, PHP, HTML, dan CSS untuk mengerjakan berbagai project kecil maupun project sekolah. Saya suka mencoba hal baru, belajar dari kesalahan saat ngoding, dan terus meningkatkan kemampuan sedikit demi sedikit lewat praktik langsung.\n\nBagi saya, coding bukan cuma soal membuat program berjalan, tapi juga tentang bagaimana sebuah website bisa memberikan pengalaman yang baik untuk orang yang memakainya. Karena itu, saya selalu mencoba membuat hasil yang rapi, responsif, dan punya tujuan yang jelas.",
+  description: "Haloo! Perkenalkan nama saya Bima Satria Putra, kalian bisa panggil aku Bima aja :D. Saya adalah seorang siswa SMK Negeri 1 Surabaya jurusan Rekayasa Perangkat Lunak yang tertarik dengan dunia web development, terutama dalam membuat tampilan website yang sederhana, nyaman dilihat, dan mudah digunakan.",
+  aboutDetail: "Saya mulai memasuki dunia IT dari kecil, berawal dari rasa penasaran, lalu perlahan berkembang menjadi sesuatu yang benar-benar saya tekuni sampai sekarang.\n\nSaat ini saya lebih sering menggunakan JavaScript, PHP, HTML, dan CSS untuk mengerjakan berbagai project kecil maupun project sekolah. Saya suka mencoba hal baru, belajar dari kesalahan saat ngoding, dan terus meningkatkan kemampuan sedikit demi sedikit lewat praktik langsung.\n\nBagi saya, coding bukan cuma soal membuat program berjalan, tapi juga tentang bagaimana sebuah website bisa memberikan pengalaman yang baik untuk orang yang memakainya. Karena itu, saya selalu mencoba membuat hasil yang rapi, responsif, dan punya tujuan yang jelas.",
   interests: ["UI/UX Design", "Gaming", "Open Source Contribution", "Tech Community", "Continuous Learning", "System Optimization"],
   goals: "Menjadi Software Architect yang mampu membangun sistem skala besar yang berdampak positif bagi masyarakat.",
   githubUrl: "https://github.com/bimaak15",
@@ -117,7 +115,7 @@ export const projects = [
     title: "Web CRM Travel",
     image: "/projects/snd-tour.png",
     description:
-      "CRM dan Sistem Manajemen Konten (CMS) untuk Agen Perjalanan, dibangun dengan PHP native dan MySQL. Menyediakan situs utama publik bagi pelanggan untuk menelusuri paket wisata, melihat galeri, dan mengakses informasi perusahaan/kontak, beserta dasbor administratif untuk mengelola konten, pemesanan, pelanggan, dan pembayaran.",
+      "CRM dan Sistem Manajemen Konten (CMS) untuk Agen Travel, dibangun dengan PHP native dan MySQL. Menyediakan situs utama publik bagi pelanggan untuk menelusuri paket wisata, melihat galeri, dan mengakses informasi perusahaan/kontak, beserta dasbor administratif untuk mengelola konten, pemesanan, pelanggan, dan pembayaran.",
     stack: ["PHP", "MySQL", "Bootstrap"],
     githubUrl: "https://github.com/FAYnim/Web-CRM-Travel",
   },
