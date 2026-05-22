@@ -456,8 +456,13 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
               >
                 <Card className="group flex h-full flex-col overflow-hidden border-none bg-muted/20 hover:bg-muted/40 transition-all shadow-sm hover:shadow-2xl">
-                  <div className="aspect-video bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
-                    <Rocket className="size-12 text-primary/20" />
+                  <div className="aspect-video relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
+                    <img 
+                      src={(project as any).image} 
+                      alt={project.title}
+                      className="size-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
                   <CardHeader>
                     <CardTitle className="text-2xl font-bold group-hover:text-primary transition-colors">{project.title}</CardTitle>

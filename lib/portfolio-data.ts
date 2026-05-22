@@ -99,6 +99,7 @@ export const skillGroups = [
 export const projects = [
   {
     title: "JavaScript DOM Learning",
+    image: "/projects/js-dom-learning.png",
     description:
       "Tutorial interaktif untuk memahami cara JavaScript berinteraksi dengan halaman web. Cocok untuk pemula yang ingin belajar DOM dari nol.",
     stack: ["HTML", "CSS", "JavaScript"],
@@ -106,6 +107,7 @@ export const projects = [
   },
   {
     title: "krisnaprinting",
+    image: "/projects/krisna-printing.png",
     description:
       "Website ini dirancang khusus untuk mengelola invoice dan transaksi harian bagi bisnis packaging (dus kemasan, spundbond, dll). Proyek ini mengubah sistem konvensional menjadi digital, memberikan kemudahan dalam pembuatan tagihan, pemantauan uang masuk, dan manajemen riwayat pesanan dengan antarmuka yang sangat intuitif.",
     stack: ["Laravel", "MySQL", "Bootstrap"],
@@ -113,6 +115,7 @@ export const projects = [
   },
   {
     title: "Web CRM Travel",
+    image: "/projects/snd-tour.png",
     description:
       "CRM dan Sistem Manajemen Konten (CMS) untuk Agen Perjalanan, dibangun dengan PHP native dan MySQL. Menyediakan situs utama publik bagi pelanggan untuk menelusuri paket wisata, melihat galeri, dan mengakses informasi perusahaan/kontak, beserta dasbor administratif untuk mengelola konten, pemesanan, pelanggan, dan pembayaran.",
     stack: ["PHP", "MySQL", "Bootstrap"],
