@@ -5,10 +5,13 @@ import {
   CheckCircle2,
   Code2,
   GitBranch,
+  Compass,
   GraduationCap,
+  Heart,
   MapPin,
   Rocket,
   Sparkles,
+  Target,
   Terminal,
 } from "lucide-react";
 
@@ -153,19 +156,30 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="profil" className="border-b bg-background py-16 sm:py-20">
-        <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:px-8">
-          <div>
+      <section id="profil" className="relative overflow-hidden border-b bg-background py-16 sm:py-20">
+        {/* Decorative elements */}
+        <div className="absolute -left-20 top-1/2 -z-10 size-80 -translate-y-1/2 rounded-full bg-primary/5 blur-[100px]" />
+        <div className="absolute -right-20 top-0 -z-10 size-80 rounded-full bg-secondary/10 blur-[100px]" />
+        
+        <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:px-8">
+          <div className="relative">
             <Badge variant="outline" className="gap-2">
               <BookOpen className="size-3.5" aria-hidden="true" />
               Tentang Saya
             </Badge>
-            <h2 className="mt-4 text-3xl font-bold tracking-normal sm:text-4xl">
+            <h2 className="mt-4 text-3xl font-bold tracking-normal sm:text-4xl lg:text-5xl">
               Profil yang langsung menjawab siapa Bima.
             </h2>
+            <div className="mt-8 space-y-4 text-lg leading-relaxed text-muted-foreground">
+              <p>{profile.description}</p>
+              <div className="text-base text-muted-foreground/80 whitespace-pre-line">
+                {/* @ts-ignore */}
+                {profile.aboutDetail}
+              </div>
+            </div>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
-            <Card>
+            <Card className="transition-all hover:border-primary/50 hover:shadow-md">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-xl">
                   <GraduationCap className="size-5 text-primary" aria-hidden="true" />
@@ -178,7 +192,7 @@ export default function Home() {
                 <p>Kelas 10 jurusan Rekayasa Perangkat Lunak.</p>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="transition-all hover:border-primary/50 hover:shadow-md">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-xl">
                   <MapPin className="size-5 text-primary" aria-hidden="true" />
@@ -191,9 +205,40 @@ export default function Home() {
                   <span className="font-medium text-foreground">Umur:</span> {profile.age}
                 </p>
                 <p>
-                  <span className="font-medium text-foreground">Tanggal lahir:</span>{" "}
-                  {profile.birthDate}
+                  <span className="font-medium text-foreground">Status:</span> Pelajar Aktif
                 </p>
+              </CardContent>
+            </Card>
+            <Card className="transition-all hover:border-primary/50 hover:shadow-md">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2 text-xl">
+                  <Heart className="size-5 text-rose-500" aria-hidden="true" />
+                  Minat & Hobi
+                </CardTitle>
+                <CardDescription>Eksplorasi di luar kode</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2">
+                  {/* @ts-ignore */}
+                  {profile.interests.map((interest) => (
+                    <Badge key={interest} variant="secondary" className="bg-rose-500/10 text-rose-600 hover:bg-rose-500/20">
+                      {interest}
+                    </Badge>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="transition-all hover:border-primary/50 hover:shadow-md">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2 text-xl">
+                  <Target className="size-5 text-emerald-500" aria-hidden="true" />
+                  Visi & Tujuan
+                </CardTitle>
+                <CardDescription>Membangun masa depan</CardDescription>
+              </CardHeader>
+              <CardContent className="text-sm leading-relaxed text-muted-foreground">
+                {/* @ts-ignore */}
+                {profile.goals}
               </CardContent>
             </Card>
           </div>
