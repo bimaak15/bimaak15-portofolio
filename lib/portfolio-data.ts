@@ -27,6 +27,15 @@ export const profile = {
   githubUrl: "https://github.com/bimaak15",
 };
 
+export const socialLinks = [
+  { name: "LinkedIn", url: "https://www.linkedin.com/in/bimasp/", icon: "linkedin" },
+  { name: "GitHub", url: "https://github.com/bimaak15", icon: "github" },
+  { name: "WhatsApp", url: "https://wa.me/628113280089", icon: "whatsapp" },
+  { name: "YouTube", url: "https://www.youtube.com/@bimaak15", icon: "youtube" },
+  { name: "Dicoding", url: "https://www.dicoding.com/users/bimaak15/academies", icon: "dicoding" },
+  { name: "Instagram", url: "https://www.instagram.com/bimaak11", icon: "instagram" },
+];
+
 export const stats = [
   { label: "Fokus", value: "Full-stack Web" },
   { label: "Pendidikan", value: "Kelas 10 RPL" },
