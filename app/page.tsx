@@ -543,6 +543,9 @@ export default function Home() {
 
       <footer className="py-12 border-t text-center text-muted-foreground text-sm">
         <p>© {new Date().getFullYear()} {profile.name} • Built with Next.js & Framer Motion</p>
+        <p className="mt-2 text-xs italic opacity-70">
+          "Jangan lupa sholat 5 waktu, karena malaikat tidak bertanya tentang repository mu ketika di alam kubur."
+        </p>
       </footer>
     </main>
   );
