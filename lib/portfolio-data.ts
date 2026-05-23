@@ -132,19 +132,19 @@ export const projects = [
 
 export const achievements = [
   {
-    title: "Siswa Rekayasa Perangkat Lunak",
-    year: "2026",
-    description: "Aktif membangun proyek web dan memperdalam fundamental software engineering.",
+    title: "Coming Soon",
+    year: "2026+",
+    description: "Sedang dalam proses pencapaian hebat berikutnya. Tunggu tanggal mainnya!",
   },
   {
-    title: "Portfolio Showcase Pertama",
-    year: "2026",
-    description: "Menyusun profil publik untuk menampilkan skill, proyek, dan repositori secara profesional.",
+    title: "Coming Soon",
+    year: "2026+",
+    description: "Pencapaian baru sedang dikerjakan. Terus pantau perkembangannya!",
   },
   {
-    title: "GitHub Project Practice",
-    year: "2026",
-    description: "Membiasakan publikasi kode, dokumentasi proyek, dan pengembangan berbasis repositori.",
+    title: "Coming Soon",
+    year: "2026+",
+    description: "Menyiapkan sesuatu yang luar biasa untuk masa depan.",
   },
 ];
 
