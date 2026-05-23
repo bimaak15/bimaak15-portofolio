@@ -588,7 +588,7 @@ export default function Home() {
           <div className="grid gap-6">
             {achievements.map((achievement, i) => (
               <motion.div
-                key={achievement.title}
+                key={`${achievement.title}-${i}`}
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
