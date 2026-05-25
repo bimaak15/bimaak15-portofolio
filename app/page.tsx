@@ -24,6 +24,10 @@ import {
   Sparkles,
   Target,
   Terminal,
+  User,
+  Languages,
+  Calendar,
+  Briefcase,
 } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
@@ -39,6 +43,7 @@ import { Separator } from "@/components/ui/separator";
 import {
   achievements,
   apiEndpoints,
+  education,
   profile,
   projects,
   skillGroups,
@@ -414,10 +419,115 @@ export default function Home() {
           </div>
           <div className="grid gap-6 sm:grid-cols-2">
             {[
-              { title: "Pendidikan", desc: profile.major, icon: GraduationCap, content: profile.school, color: "text-blue-500" },
-              { title: "Identitas", desc: profile.location, icon: MapPin, content: `Usia ${profile.age} • Pelajar Aktif`, color: "text-emerald-500" },
-              { title: "Minat & Hobi", desc: "Eksplorasi di luar kode", icon: Heart, content: (profile as any).interests, color: "text-rose-500", isBadge: true },
-              { title: "Visi & Tujuan", desc: "Target Masa Depan", icon: Target, content: (profile as any).goals, color: "text-amber-500" }
+              { 
+                title: "Pendidikan", 
+                desc: education.status, 
+                icon: GraduationCap, 
+                color: "text-blue-500",
+                content: (
+                  <div className="space-y-4">
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-2 text-foreground/80">
+                        <Rocket className="size-4 text-blue-400" />
+                        <span className="font-semibold">{education.schoolName}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <BookOpen className="size-4 text-muted-foreground" />
+                        <span>{education.major}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Calendar className="size-4 text-muted-foreground" />
+                        <span>{education.period}</span>
+                      </div>
+                    </div>
+                    
+                    <Separator className="bg-primary/5" />
+                    
+                    <div className="space-y-2">
+                      <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Fokus Pembelajaran</p>
+                      <p className="text-sm leading-relaxed">{education.focus}</p>
+                    </div>
+
+                    <div className="flex flex-wrap gap-1.5 mt-2">
+                      {education.skills.map((skill) => (
+                        <Badge key={skill} variant="secondary" className="bg-blue-500/5 text-blue-600 border-blue-500/10 text-[10px] py-0 px-2">
+                          {skill}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+                )
+              },
+              { 
+                title: "Identitas", 
+                desc: profile.status, 
+                icon: User, 
+                color: "text-emerald-500",
+                content: (
+                  <div className="space-y-4">
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-2">
+                        <MapPin className="size-4 text-emerald-400" />
+                        <span className="font-semibold">{profile.location}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Calendar className="size-4 text-muted-foreground" />
+                        <span>{profile.age} ({profile.birthDate.split(',')[1].trim()})</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Languages className="size-4 text-muted-foreground" />
+                        <div className="flex flex-wrap gap-1">
+                          {profile.languages.map((lang, idx) => (
+                            <span key={lang}>{lang}{idx < profile.languages.length - 1 ? ' • ' : ''}</span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+
+                    <Separator className="bg-primary/5" />
+
+                    <div className="space-y-2">
+                      <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Lokasi Lengkap</p>
+                      <p className="text-sm">{profile.fullLocation}</p>
+                    </div>
+                    
+                    <div className="flex gap-2">
+                      <Badge variant="outline" className="bg-emerald-500/5 text-emerald-600 border-emerald-500/10 text-[10px]">
+                        Web Dev
+                      </Badge>
+                      <Badge variant="outline" className="bg-emerald-500/5 text-emerald-600 border-emerald-500/10 text-[10px]">
+                        UI Design
+                      </Badge>
+                    </div>
+                  </div>
+                )
+              },
+              { 
+                title: "Minat & Hobi", 
+                desc: "Eksplorasi di luar kode", 
+                icon: Heart, 
+                color: "text-rose-500",
+                content: (
+                  <div className="flex flex-wrap gap-1.5 mt-1">
+                    {profile.interests.map((item) => (
+                      <Badge key={item} variant="secondary" className="bg-rose-500/5 text-rose-600 border-rose-500/10 text-[10px]">
+                        {item}
+                      </Badge>
+                    ))}
+                  </div>
+                )
+              },
+              { 
+                title: "Visi & Tujuan", 
+                desc: "Target Masa Depan", 
+                icon: Target, 
+                color: "text-amber-500",
+                content: (
+                  <p className="text-sm leading-relaxed italic border-l-2 border-amber-500/20 pl-3">
+                    "{profile.goals}"
+                  </p>
+                )
+              }
             ].map((card, i) => (
               <motion.div
                 key={i}
@@ -426,25 +536,15 @@ export default function Home() {
               >
                 <Card className="h-full group hover:border-primary/50 transition-all shadow-sm hover:shadow-xl hover:shadow-primary/5 overflow-hidden">
                   <div className={`h-1 w-full bg-gradient-to-r from-transparent via-primary/20 to-transparent group-hover:via-primary/50 transition-all`} />
-                  <CardHeader>
+                  <CardHeader className="pb-3">
                     <CardTitle className="flex items-center gap-3 text-xl">
                       <card.icon className={`${card.color} size-5 transition-transform group-hover:scale-110`} />
                       {card.title}
                     </CardTitle>
-                    <CardDescription>{card.desc}</CardDescription>
+                    <CardDescription className="text-xs font-medium text-primary/70">{card.desc}</CardDescription>
                   </CardHeader>
-                  <CardContent className="text-sm leading-7 text-muted-foreground">
-                    {card.isBadge ? (
-                      <div className="flex flex-wrap gap-2 mt-1">
-                        {(card.content as string[]).map((item) => (
-                          <Badge key={item} variant="secondary" className="bg-primary/5 text-primary border-primary/10">
-                            {item}
-                          </Badge>
-                        ))}
-                      </div>
-                    ) : (
-                      <p>{card.content as string}</p>
-                    )}
+                  <CardContent className="text-sm leading-6 text-muted-foreground/80">
+                    {card.content}
                   </CardContent>
                 </Card>
               </motion.div>

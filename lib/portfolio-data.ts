@@ -16,16 +16,29 @@ export const profile = {
   role: "Junior Software Engineer",
   roles: ["Junior Software Engineer", "Fullstack Developer", "UI Enthusiast", "Web Developer", "Game Enthusiast"],
   age: "16 tahun",
-  birthDate: "Tanggal lahir siap dihubungkan ke API",
+  birthDate: "Surabaya, 15 Maret 2010",
   school: "SMK Negeri 1 Surabaya",
   major: "Rekayasa Perangkat Lunak",
   location: "Surabaya, Indonesia",
+  fullLocation: "Surabaya, Jawa Timur, Indonesia",
+  status: "Pelajar Aktif (SMK)",
   description: "Haloo! Perkenalkan nama saya Bima Satria Putra, kalian bisa panggil saya Bima aja :D. Saya adalah seorang siswa SMK Negeri 1 Surabaya jurusan Rekayasa Perangkat Lunak yang tertarik dengan dunia web development, terutama dalam membuat tampilan website yang sederhana, nyaman dilihat, dan mudah digunakan.",
   aboutDetail: "Saya mulai memasuki dunia IT dari kecil, berawal dari rasa penasaran, lalu perlahan berkembang menjadi sesuatu yang benar-benar saya tekuni sampai sekarang.\n\nSaat ini saya lebih sering menggunakan JavaScript, PHP, HTML, dan CSS untuk mengerjakan berbagai project kecil maupun project sekolah. Saya suka mencoba hal baru, belajar dari kesalahan saat ngoding, dan terus meningkatkan kemampuan sedikit demi sedikit lewat praktik langsung.\n\nBagi saya, coding bukan cuma soal membuat program berjalan, tapi juga tentang bagaimana sebuah website bisa memberikan pengalaman yang baik untuk orang yang memakainya. Karena itu, saya selalu mencoba membuat hasil yang rapi, responsif, dan punya tujuan yang jelas.",
   interests: ["UI/UX Design", "Gaming", "Open Source Contribution", "Tech Community", "Continuous Learning", "System Optimization"],
   goals: "Menjadi Software Architect yang mampu membangun sistem skala besar yang berdampak positif bagi masyarakat.",
   githubUrl: "https://github.com/bimaak15",
+  languages: ["Bahasa Indonesia (Native)", "English (Conversational)"],
 };
+
+export const education = {
+  schoolName: "SMK Negeri 1 Surabaya",
+  major: "Rekayasa Perangkat Lunak",
+  period: "2025 - 2028",
+  status: "Kelas 10",
+  focus: "Web Technology & Fundamental Software Engineer",
+  skills: ["HTML", "CSS", "JavaScript", "Laravel", "PHP", "MySQL", "UI Design"],
+};
+
 
 export const socialLinks = [
   { name: "LinkedIn", url: "https://www.linkedin.com/in/bimasp/", icon: "linkedin" },
