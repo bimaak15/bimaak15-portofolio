@@ -465,39 +465,56 @@ export default function Home() {
                 color: "text-emerald-500",
                 content: (
                   <div className="space-y-4">
-                    <div className="space-y-2">
-                      <div className="flex items-center gap-2">
-                        <MapPin className="size-4 text-emerald-400" />
-                        <span className="font-semibold">{profile.location}</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <Calendar className="size-4 text-muted-foreground" />
-                        <span>{profile.age} ({profile.birthDate.split(',')[1].trim()})</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <Languages className="size-4 text-muted-foreground" />
-                        <div className="flex flex-wrap gap-1">
-                          {profile.languages.map((lang, idx) => (
-                            <span key={lang}>{lang}{idx < profile.languages.length - 1 ? ' • ' : ''}</span>
-                          ))}
+                    <div className="flex items-center justify-between">
+                      <div className="space-y-2">
+                        <div className="flex items-center gap-2">
+                          <MapPin className="size-4 text-emerald-400" />
+                          <span className="font-semibold">{profile.location}</span>
                         </div>
+                        <div className="flex items-center gap-2">
+                          <Calendar className="size-4 text-muted-foreground" />
+                          <span>{profile.age} ({profile.birthDate.split(',')[1].trim()})</span>
+                        </div>
+                      </div>
+                      {profile.isAvailable && (
+                        <div className="flex items-center gap-2 rounded-full bg-emerald-500/10 px-2.5 py-1 text-[10px] font-bold text-emerald-600 border border-emerald-500/20">
+                          <span className="relative flex h-2 w-2">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                          </span>
+                          AVAIL
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <Languages className="size-4 text-muted-foreground" />
+                      <div className="flex flex-wrap gap-1 text-xs">
+                        {profile.languages.map((lang, idx) => (
+                          <span key={lang}>{lang}{idx < profile.languages.length - 1 ? ' • ' : ''}</span>
+                        ))}
                       </div>
                     </div>
 
                     <Separator className="bg-primary/5" />
 
                     <div className="space-y-2">
-                      <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Lokasi Lengkap</p>
-                      <p className="text-sm">{profile.fullLocation}</p>
+                      <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Minat Teknologi</p>
+                      <div className="flex flex-wrap gap-1.5">
+                        {profile.techInterests.map((interest) => (
+                          <Badge key={interest} variant="outline" className="bg-emerald-500/5 text-emerald-600 border-emerald-500/10 text-[10px] py-0 px-2">
+                            {interest}
+                          </Badge>
+                        ))}
+                      </div>
                     </div>
-                    
-                    <div className="flex gap-2">
-                      <Badge variant="outline" className="bg-emerald-500/5 text-emerald-600 border-emerald-500/10 text-[10px]">
-                        Web Dev
-                      </Badge>
-                      <Badge variant="outline" className="bg-emerald-500/5 text-emerald-600 border-emerald-500/10 text-[10px]">
-                        UI Design
-                      </Badge>
+
+                    <div className="space-y-2 mt-4">
+                      <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Aktivitas</p>
+                      <div className="flex gap-2 p-2 rounded-lg bg-emerald-500/5 border border-emerald-500/10">
+                        <Rocket className="size-4 text-emerald-400 shrink-0 mt-0.5" />
+                        <p className="text-[11px] leading-relaxed italic">{profile.currentActivity}</p>
+                      </div>
                     </div>
                   </div>
                 )
