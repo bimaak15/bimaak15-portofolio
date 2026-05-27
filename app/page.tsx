@@ -405,7 +405,7 @@ export default function Home() {
               Tentang Saya
             </Badge>
             <h2 className="mt-6 text-4xl font-bold tracking-tight sm:text-5xl">
-              Profil yang langsung menjawab <span className="text-primary">siapa Bima.</span>
+              Profil yang menjawab <span className="text-primary">siapa Aku?</span>
             </h2>
             <div className="mt-8 space-y-6 text-lg leading-relaxed text-muted-foreground">
               <p className="border-l-4 border-primary/20 pl-6 italic">
@@ -419,10 +419,10 @@ export default function Home() {
           </div>
           <div className="grid gap-6 sm:grid-cols-2">
             {[
-              { 
-                title: "Pendidikan", 
-                desc: education.status, 
-                icon: GraduationCap, 
+              {
+                title: "Pendidikan",
+                desc: education.status,
+                icon: GraduationCap,
                 color: "text-blue-500",
                 content: (
                   <div className="space-y-4">
@@ -440,9 +440,9 @@ export default function Home() {
                         <span>{education.period}</span>
                       </div>
                     </div>
-                    
+
                     <Separator className="bg-primary/5" />
-                    
+
                     <div className="space-y-2">
                       <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Fokus Pembelajaran</p>
                       <p className="text-sm leading-relaxed">{education.focus}</p>
@@ -458,10 +458,10 @@ export default function Home() {
                   </div>
                 )
               },
-              { 
-                title: "Identitas", 
-                desc: profile.status, 
-                icon: User, 
+              {
+                title: "Identitas",
+                desc: profile.status,
+                icon: User,
                 color: "text-emerald-500",
                 content: (
                   <div className="space-y-4">
@@ -519,10 +519,10 @@ export default function Home() {
                   </div>
                 )
               },
-              { 
-                title: "Minat & Hobi", 
-                desc: "Eksplorasi di luar kode", 
-                icon: Heart, 
+              {
+                title: "Minat & Hobi",
+                desc: "Eksplorasi di luar kode",
+                icon: Heart,
                 color: "text-rose-500",
                 content: (
                   <div className="flex flex-wrap gap-1.5 mt-1">
@@ -534,10 +534,10 @@ export default function Home() {
                   </div>
                 )
               },
-              { 
-                title: "Visi & Tujuan", 
-                desc: "Target Masa Depan", 
-                icon: Target, 
+              {
+                title: "Visi & Tujuan",
+                desc: "Target Masa Depan",
+                icon: Target,
                 color: "text-amber-500",
                 content: (
                   <p className="text-sm leading-relaxed italic border-l-2 border-amber-500/20 pl-3">
