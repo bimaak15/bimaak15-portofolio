@@ -576,7 +576,7 @@ export default function Home() {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <Badge variant="accent" className="gap-2">
               <Code2 className="size-3.5" aria-hidden="true" />
-              Etalase Keahlian
+              Beberapa Keahlian
             </Badge>
             <h2 className="mt-6 text-4xl font-bold tracking-tight sm:text-5xl">
               Tech Stack mumpuni yang dikuasai.
