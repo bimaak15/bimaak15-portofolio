@@ -55,7 +55,7 @@ export const socialLinks = [
 export const stats = [
   { label: "Fokus", value: "Full-stack Web" },
   { label: "Pendidikan", value: "Kelas 10 RPL" },
-  { label: "Basis", value: "Laravel + React" },
+  { label: "Basis", value: "JavaScript + PHP Laravel" },
 ];
 
 export const skillGroups = [
