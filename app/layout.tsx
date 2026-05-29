@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   title: "Bima Satria Putra | Junior Software Engineer",
   description:
     "Portfolio interaktif Bima Satria Putra, Junior Software Engineer dan siswa RPL SMK Negeri 1 Surabaya.",
+  icons: {
+    icon: "/assets/icons/favicon.png",
+  },
 };
 
 export default function RootLayout({
