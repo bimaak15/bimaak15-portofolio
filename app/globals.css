@@ -59,11 +59,7 @@ html {
 
 body {
   min-height: 100vh;
-  background:
-    linear-gradient(90deg, rgb(15 23 42 / 0.035) 1px, transparent 1px),
-    linear-gradient(180deg, rgb(15 23 42 / 0.035) 1px, transparent 1px),
-    hsl(var(--background));
-  background-size: 36px 36px;
+  background-color: hsl(var(--background));
   color: hsl(var(--foreground));
 }
 

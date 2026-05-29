@@ -21,6 +21,8 @@ export const metadata: Metadata = {
   },
 };
 
+import { Background } from "@/components/Background";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -28,7 +30,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased selection:bg-primary/20`}>
+        <Background />
         {children}
       </body>
     </html>
